@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    </style>
+</head>
+
+<body>
+    <audio id="myAudio">
+        <source src="./Pink Floyd - Hey, Hey, Rise Up (feat. Andriy Khlyvnyuk of Boombox).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <img id="postcard" src="./images/artwork-440x440.jpg" />
+    <script>
+        let postcard = document.getElementById("postcard");
+        let audio = document.getElementById("myAudio");
+        let i = true;
+        postcard.onclick = function () {
+            if (i) {
+                audio.play();
+                i = false;
+            } else {
+                audio.pause();
+                i = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
